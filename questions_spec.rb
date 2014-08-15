@@ -50,12 +50,12 @@ describe 'the Friday test :)' do
     expect(n).to eq [1, 2, 3, 4, 5]
   end
 
-  fit 'array_sort_by_last_letter_of_word' do
+  it 'array_sort_by_last_letter_of_word' do
     n = array_sort_by_last_letter_of_word ['sky', 'puma', 'maker']
     expect(n).to eq ['puma', 'maker', 'sky']
   end
 
-  specify 'get_first_half_of_string' do
+  it 'get_first_half_of_string' do
     a = get_first_half_of_string 'banana'
     b = get_first_half_of_string 'apple'
 
@@ -63,7 +63,7 @@ describe 'the Friday test :)' do
     expect(b).to eq 'app'
   end
 
-  specify 'make_numbers_negative' do
+  it 'make_numbers_negative' do
     a = make_numbers_negative 5
     b = make_numbers_negative -7
 
@@ -71,87 +71,87 @@ describe 'the Friday test :)' do
     expect(b).to eq -7
   end
 
-  specify 'separate_array_into_even_and_odd_numbers' do
+  it 'separate_array_into_even_and_odd_numbers' do
     n = separate_array_into_even_and_odd_numbers [1, 2, 3, 4, 5, 6, 7]
     expect(n).to eq [[2, 4, 6], [1, 3, 5, 7]]
   end
 
-  specify 'number_of_elements_that_are_palindromes' do
+  it 'number_of_elements_that_are_palindromes' do
     n = number_of_elements_that_are_palindromes ['bob', 'radar', 'alex', 'noon', 'banana']
     expect(n).to eq 3
   end
 
-  specify 'shortest_word_in_array' do
+  it 'shortest_word_in_array' do
     n = shortest_word_in_array %w(here is a bunch of words of different lengths)
     expect(n).to eq 'a'
   end
 
-  specify 'longest_word_in_array' do
+  it 'longest_word_in_array' do
     n = longest_word_in_array %w(here is a bunch of words of different lengths)
     expect(n).to eq 'different'
   end
 
-  specify 'total_of_array' do
+  it 'total_of_array' do
     n = total_of_array [1, 3, 5, 6, 2, 8]
     expect(n).to eq 25
   end
 
-  specify 'double_array' do
+  it 'double_array' do
     n = double_array [1, 2, 3]
     expect(n).to eq [1, 2, 3, 1, 2, 3]
   end
 
-  specify 'turn_symbol_into_string' do
+  it 'turn_symbol_into_string' do
     n = turn_symbol_into_string :foobar
     expect(n).to eq 'foobar'
   end
 
-  specify 'average_of_array' do
+  it 'average_of_array' do
     n = average_of_array [10, 15, 25]
     expect(n).to eq 17
   end
 
-  specify 'get_elements_until_greater_than_five' do
+  it 'get_elements_until_greater_than_five' do
     n = get_elements_until_greater_than_five [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
     expect(n).to eq [1, 3, 5, 4, 1, 2]
   end
 
-  specify 'convert_array_to_a_hash' do
+  it 'convert_array_to_a_hash' do
     n = convert_array_to_a_hash ['a', 'b', 'c', 'd']
     expect(n).to eq({'a' => 'b', 'c' => 'd'})
   end
 
-  specify 'get_all_letters_in_array_of_words' do
+  it 'get_all_letters_in_array_of_words' do
     n = get_all_letters_in_array_of_words ['cat', 'dog', 'fish']
     expect(n).to eq ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
   end
 
-  specify 'swap_keys_and_values_in_a_hash' do
+  it 'swap_keys_and_values_in_a_hash' do
     n = swap_keys_and_values_in_a_hash({'a' => 'b', 'c' => 'd'})
     expect(n).to eq({'b' => 'a', 'd' => 'c'})
   end
 
-  specify 'add_together_keys_and_values' do
+  it 'add_together_keys_and_values' do
     n = add_together_keys_and_values({1 => 1, 2 => 2})
     expect(n).to eq 6
   end
 
-  specify 'remove_capital_letters_from_string' do
+ it 'remove_capital_letters_from_string' do
     n = remove_capital_letters_from_string 'Hello JohnDoe'
     expect(n).to eq 'ello ohnoe'
   end
 
-  specify 'round_up_number' do
+  it 'round_up_number' do
     n = round_up_number 3.142
     expect(n).to eq 4
   end
 
-  specify 'round_down_number' do
+  it 'round_down_number' do
     n = round_down_number 4.9
     expect(n).to eq 4
   end
 
-  specify 'format_date_nicely' do
+  fit 'format_date_nicely' do
     n = format_date_nicely Time.new(2013, 10, 31)
     expect(n).to eq '31/10/2013'
   end
