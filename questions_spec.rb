@@ -194,16 +194,16 @@ describe 'the Friday test :)' do
     expect(b).to eq 1.7320508075688772
   end
 
-  fit 'word_count_a_file' do
+  it 'word_count_a_file' do
     n = word_count_a_file 'lorem.txt'
     expect(n).to eq 70
   end
 
-  specify 'call_method_from_string' do
+  it 'call_method_from_string' do
     expect { call_method_from_string('foobar') }.to raise_error(NameError)
   end
 
-  specify 'is_a_2014_bank_holiday?' do
+  it 'is_a_2014_bank_holiday?' do
     a = is_a_2014_bank_holiday?(Time.new(2014, 8, 25))
     b = is_a_2014_bank_holiday?(Time.new(2014, 8, 26))
 
@@ -216,7 +216,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 2016
   end
 
-  specify 'count_words_of_each_length_in_a_file' do
+  fit 'count_words_of_each_length_in_a_file' do
     n = count_words_of_each_length_in_a_file('lorem.txt') || []
     expect(Hash[n.sort]).to eq({1=>1, 2=>5, 3=>7, 4=>12, 5=>14, 6=>4, 7=>8, 8=>6, 9=>6, 10=>2, 11=>2, 12=>3}) 
   end

@@ -224,6 +224,14 @@ end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
+	word_count=0
+	File.open(file_path, "r") do |file|
+		file.each_line do |line|
+			puts line
+		  word_count += line.split(" ").count
+		end
+	end
+	word_count
 end
 
 # --- tougher ones ---
@@ -232,12 +240,16 @@ end
 # called call_method_from_string('foobar')
 # the method foobar should be invoked
 def call_method_from_string(str_method)
+	send(str_method)
+
 end
 
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2014_bank_holiday?(date)
+
+
 end
 
 # given your birthday this year, this method tells you
@@ -252,6 +264,15 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
+	answer = Hash.new
+	File.open(file_path, "r") do |file|
+		file.each_line do |line|
+			for i in 1..12
+				answer[i]  = line.gsub(/[^0-9a-z ]/i, '').split(" ").count { |word| word.length == i}
+			end
+		end
+	end
+	answer
 end
 
 # implement fizzbuzz without modulo, i.e. the % method
